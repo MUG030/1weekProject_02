@@ -12,6 +12,7 @@ public class GameTextBox : MonoBehaviour
     private int currentIndex; // 現在表示しているテキストのインデックス
     public GameObject closeButton; // CloseButtonオブジェクト
     public GameObject returnButton; // ReturnButtonオブジェクト
+    public GameObject explanationCanvas; // ExplanationCanvasのオブジェクト
 
     public float typingSpeed = 0.05f; // 一文字表示する速度
 
@@ -80,8 +81,8 @@ public class GameTextBox : MonoBehaviour
     private void HideText()
     {
         // テキストボックスを非表示
-        textBox.gameObject.SetActive(false);
         this.gameObject.SetActive(false);
+        explanationCanvas.gameObject.SetActive(true);
     }
 
     private async void ReturnText()
