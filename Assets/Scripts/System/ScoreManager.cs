@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
@@ -37,11 +38,11 @@ public class ScoreManager : MonoBehaviour
 
     private int CalculateScore(float fillAmount)
     {
-        if (fillAmount < 0.4f || fillAmount >= 0.95f)
+        /*if (fillAmount < 0.4f || fillAmount >= 0.95f)
         {
             return 0;
-        }
-        else if (fillAmount >= 0.4f && fillAmount < 0.5f)
+        }*/
+        if (fillAmount >= 0.4f && fillAmount < 0.5f)
         {
             return 50;
         }
@@ -78,5 +79,13 @@ public class ScoreManager : MonoBehaviour
         // スコアを更新して表示
         currentScore += score;
         scoreText.text = "Score: " + currentScore.ToString();
+        GameManager.instance.score = (int)currentScore;
+
+        // fillAmountが最大値に到達した場合、GameManagerにスコアを設定する
+        if (fillImage.fillAmount >= 1f)
+        {
+            
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }
