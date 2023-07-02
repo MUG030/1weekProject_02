@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using unityroom.Api;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -80,11 +81,12 @@ public class ScoreManager : MonoBehaviour
         currentScore += score;
         scoreText.text = "Score: " + currentScore.ToString();
         GameManager.instance.score = (int)currentScore;
+        // ボードNo1にスコア123.45fを送信する。
+        UnityroomApiClient.Instance.SendScore(1, currentScore, ScoreboardWriteMode.Always);
 
         // fillAmountが最大値に到達した場合、GameManagerにスコアを設定する
         if (fillImage.fillAmount >= 1f)
         {
-            
             SceneManager.LoadScene("GameOver");
         }
     }

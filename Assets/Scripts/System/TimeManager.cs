@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TimeManager : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class TimeManager : MonoBehaviour
         else
         {
             // 制限時間終了時の処理
-            // 例えばゲームオーバー処理などをここに記述する
+            SceneManager.LoadScene("GameClear");
         }
     }
 

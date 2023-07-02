@@ -10,7 +10,10 @@ public class ResultScore : MonoBehaviour
     private void Start()
     {
         // GameManagerからスコアを取得し、テキストに表示する
-        int score = GameManager.instance.score;
-        scoreText.text = "Score: " + score.ToString();
+        if (GameManager.instance != null && GameManager.instance.score != null)
+        {
+            int score = GameManager.instance.score;
+            scoreText.text = "Score: " + score.ToString();
+        }
     }
 }
