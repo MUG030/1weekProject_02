@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using Cysharp.Threading.Tasks;
 using System;
-using UnityEngine.SceneManagement;
 
 public class PlayerChange : MonoBehaviour
 {
@@ -43,11 +42,6 @@ public class PlayerChange : MonoBehaviour
             currentSpeed -= teaSpeed;
             // スピードが0未満にならないようにクランプする
             currentSpeed = Mathf.Max(currentSpeed, 0f);
-        }
-        // fillAmountが最大値に到達した場合、GameOberシーンを呼び出す
-        if (fillImage.fillAmount >= 1f)
-        {
-            SceneManager.LoadScene("GameOver");
         }
     }
 
