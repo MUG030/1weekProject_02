@@ -41,6 +41,7 @@ public class FadeoutScene : MonoBehaviour
 
     private async UniTask ChangeSceneAsync() // メソッド名を変更し、非同期メソッドに修正
     {
+        Debug.Log("シーンが呼ばれた");
         SceneManager.LoadScene(sceneName);
     }
 

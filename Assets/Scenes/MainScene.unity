@@ -1192,10 +1192,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textBox: {fileID: 455015854}
-  dialogueList:
+  closeButton: {fileID: 1685449932}
+  returnButton: {fileID: 1246053114}
+  explanationCanvas: {fileID: 2143059807}
+  textMeshPro: {fileID: 455015854}
+  textList:
   - "\u3088\u3046\u3053\u305D"
   - "\u4F55\u540D\u69D8\u3067\u3057\u3087\u3046... \u3042\u3063"
   - "\u3059\u307F\u307E\u305B\u3093\u3002\u30A2\u30EB\u30D0\u30A4\u30C8\u5E0C\u671B\u306E\u65B9\u3067\u3057\u305F\u304B\u3002"
+  - "\u6539\u3081\u307E\u3057\u3066\u3002\u3088\u3046\u3053\u305D\u304A\u8D8A\u3057\u3044\u305F\u3060\u304D\u307E\u3057\u305F\u3002"
   - "\u6539\u3081\u307E\u3057\u3066\u3002\u3088\u3046\u3053\u305D\u304A\u8D8A\u3057\u3044\u305F\u3060\u304D\u307E\u3057\u305F\u3002"
   - "\u5916\u306F\u6691\u304B\u3063\u305F\u3067\u3057\u3087\u3046\uFF1F\u5C11\u3057\u3060\u3051\u304A\u8336\u3067\u3082\u3044\u304B\u304C\u3067\u3059\u304B\uFF1F"
   - "\u5927\u4E08\u592B\uFF1F\u5206\u304B\u308A\u307E\u3057\u305F\u3002"
@@ -1203,9 +1208,6 @@ MonoBehaviour:
   - "\u4ECA\u56DE\u306F\u304A\u7D05\u8336\u3092\u3057\u3063\u304B\u308A\u6DF9\u308C\u3089\u308C\u308B\u304B\u3092\u898B\u307E\u3059\u3002"
   - "\u904B\u3076\u3053\u3068\u3082\u8003\u3048\u3066\u6DF9\u308C\u3066\u4E0B\u3055\u3044\u306D\u3002"
   - "\u3067\u306F\u6E96\u5099\u304C\u3067\u304D\u305F\u3089\u59CB\u3081\u307E\u3057\u3087\u3046\u304B\u3002"
-  closeButton: {fileID: 1685449932}
-  returnButton: {fileID: 1246053114}
-  explanationCanvas: {fileID: 2143059807}
   typingSpeed: 0.08
 --- !u!114 &639080854
 MonoBehaviour:
@@ -2494,7 +2496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.066037714, g: 0.066037714, b: 0.066037714, a: 0.98039216}
+  m_Color: {r: 0.01886791, g: 0.01886791, b: 0.01886791, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3581,19 +3583,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2083318164}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
-        m_MethodName: ChangeScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2083318164
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -39,10 +39,6 @@ public class ScoreManager : MonoBehaviour
 
     private int CalculateScore(float fillAmount)
     {
-        /*if (fillAmount < 0.4f || fillAmount >= 0.95f)
-        {
-            return 0;
-        }*/
         if (fillAmount >= 0.4f && fillAmount < 0.5f)
         {
             return 50;
@@ -81,8 +77,6 @@ public class ScoreManager : MonoBehaviour
         currentScore += score;
         scoreText.text = "Score: " + currentScore.ToString();
         GameManager.instance.score = (int)currentScore;
-        // ボードNo1にスコア123.45fを送信する。
-        UnityroomApiClient.Instance.SendScore(1, currentScore, ScoreboardWriteMode.Always);
 
         // fillAmountが最大値に到達した場合、GameManagerにスコアを設定する
         if (fillImage.fillAmount >= 1f)
